@@ -4,6 +4,42 @@ Hello! I’m Razzaaq, and in this project, I’m building an application called 
 
 The application allows users to add, view details of, delete, update, and display all notes.
 
+### Project Structure :
+
+```ts
+app/                        // Direktori utama aplikasi.
+├── notes/                  // Halaman dan komponen fitur "notes".
+│   ├── globals.css         // File CSS global.
+│   ├── layout.tsx          // Komponen tata letak "notes".
+│   └── page.tsx            // Komponen halaman utama "notes".
+
+components/                 // UI yang dapat digunakan kembali.
+
+graphql/                    // File-file terkait GraphQL.
+├── mutations.ts            // Mutasi GraphQL untuk CRUD data.
+├── queries.ts              // Query GraphQL untuk mengambil data.
+├── resolvers.ts            // Fungsi resolver untuk logika GraphQL.
+└── schema.ts               // Skema GraphQL.
+
+lib/                        // Fungsi perpustakaan/utilitas.
+└── formattedDate.ts        // Fungsi untuk memformat tanggal.
+
+pages/                      // Komponen halaman dan rute API.
+└── api/                    // Direktori rute API.
+    └── graphql.ts          // Rute API untuk permintaan GraphQL.
+
+prisma/                     // File terkait Prisma untuk manajemen db.
+├── migrations/             // File migrasi skema basis data.
+├── db.ts                   // Konfigurasi klien Prisma.
+├── schema.prisma           // Skema Prisma.
+└── seed.ts                 // Skrip untuk seed data awal.
+
+public/                     // Direktori untuk aset statis.
+
+styles/                     // Custom Chackra UI
+
+```
+
 ## Running the Project
 
 After cloning the repository and completing the setup, follow these steps to run the project:
