@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+Hello! I’m Razzaaq, and in this project, I’m building an application called "Application Notes" using the tech stack: Next.js, TypeScript, Chakra UI, PostgreSQL, GraphQL Apollo, and Prisma. This project is designed to fulfill the requirements of the Full Stack Engineer study case provided by Dibimbing.id.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The application allows users to add, view details of, delete, update, and display all notes.
+
+## Running the Project
+
+After cloning the repository and completing the setup, follow these steps to run the project:
+
+### 1. Clone the Repository
+
+If you haven't done so already, clone the repository to your local machine
+
+### 2. Install Dependencies
+
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Set Up Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create `.env` from `.env-example`. Fill that environtment as your database (Postgresql).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 4. Set Up Prisma and Seed the Database
 
-## Learn More
+Turn on your PostgreSQL. Do a migration to your Database and Seed them:
 
-To learn more about Next.js, take a look at the following resources:
+```
+npx prisma migrate dev  # Apply migrations to the database
+npx prisma db seed      # Seed the database with initial data
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 5. Start the Development Server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Run the development server with the following command:
 
-## Deploy on Vercel
+```
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The development server will be available at http://localhost:3000. Open this URL in your browser to view your application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### 6. Verify GraphQL Server
+
+Ensure that your GraphQL server is running by visiting:
+
+http://localhost:3000/api/graphql
+
+If the server is running correctly, you should see the GraphQL Playground or any integrated GraphQL server interface.
